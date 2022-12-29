@@ -37,16 +37,16 @@
                 <nav class="hidden float right bg-blue-400 border-gray-200 py-2.5 mx-auto lg:block">
                     <ul class="block lg:flex">
                         <li class="group">
-                            <a href="home" class="text-base text-black py-2 mx-8 group-hover:to-blue-400">Home</a>
+                            <a href="/" class="text-base text-black py-2 mx-8 group-hover:to-blue-400">Home</a>
                         </li>
                         <li class="group">
-                            <a href="home" class="text-base text-black py-2 mx-8 group-hover:to-blue-400">About</a>
+                            <a href="/home" class="text-base text-black py-2 mx-8 group-hover:to-blue-400">About</a>
                         </li>
                         <li class="group">
-                            <a href="home" class="text-base text-black py-2 mx-8 group-hover:to-blue-400">Ticket</a>
+                            <a href="ticket" class="text-base text-black py-2 mx-8 group-hover:to-blue-400">Ticket</a>
                         </li>
                         <li class="group">
-                            <a href="home" class="text-base text-black py-2 mx-8 group-hover:to-blue-400">Login</a>
+                            <a href="signin" class="text-base text-black py-2 mx-8 group-hover:to-blue-400">Login</a>
                         </li>
                         <a href="cart">
                             <img src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png" alt="" class="h-8 py-2 mx-8">

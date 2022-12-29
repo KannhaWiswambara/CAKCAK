@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,11 +19,17 @@ use App\Http\Controllers\HomeController;
 //     return view('welcome');
 // });
 
-Route::get('/index', [HomeController::class, 'index']);
+Route::get('/ticket', [HomeController::class, 'index']);
 Route::get('/cart', [HomeController::class, 'cart']);
-
+Route::post('/checkout', [HomeController::class, 'store']);
+Route::get('/signin', [HomeController::class, 'signin']);
+Route::get('/signup', [HomeController::class, 'signup']);
+Route::get('/', [HomeController::class, 'home']);
+Route::get('/home', [HomeController::class, 'homepage']);
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
+Route::group(['middleware'=>'auth:sanctum'],  function  ()  {
+     Route::resource('admin',  AdminController::class);
+     });
 require __DIR__.'/auth.php';

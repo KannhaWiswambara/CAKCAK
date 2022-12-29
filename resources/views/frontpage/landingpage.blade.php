@@ -41,6 +41,7 @@
                             </div> --}}
                         </div>
                         <section>
+                            @foreach ($packages as $key=>$item)
                             <div class="md:flex font-sans pt-8">
                                 <div class="md:shrink-0">
                                     <img src="https://3.bp.blogspot.com/-Znzu-6FT16s/WG5r3cknMdI/AAAAAAAADRU/6IeehlFni1ECyf7tyuw8-hxdXeIWZ3b1QCEw/s1600/Tari%2BKecak%2BUbud%2B1.png"
@@ -51,26 +52,23 @@
                                 <form class="p-6">
                                     <div class="flex flex-wrap">
                                         <h1 class="flex-auto font-medium text-slate-900">
-                                            Kecak Fire Gianyar
+                                            {{$item->package_name}}
                                         </h1>
                                         <div class="w-full flex-none mt-2 order-1 text-3xl fontbold text-violet-600">
-                                            Rp. 120.000
+                                            {{$item->package_price}}
                                         </div>
                                         <div class="text-sm font-medium text-slate-400">
                                             Available
                                         </div>
                                     </div>
                                     <div class="flex items-baseline mt-4 mb-6 pb-6 border-b borderslate-200">
-                                        First, one of the mostvisited tourist attractions in Bali is Ubud, visited by
-                                        either
-                                        local or international tourists.
-                                        Ubud Bali tourist attraction has astonished many visitors who always want to return
+                                        {{$item->package_desc}}
                                     </div>
                                     <div class="flex space-x-4 mb-5 text-sm font-medium">
                                         <div class="flex-auto flex space-x-4">
                                             <a href="cart">
                                                 <button class="h-10 px-6 font-semibold rounded-full bg-violet-600 text-white"
-                                                type="button">
+                                                type="button" id="product_1">
                                                     Book Now
                                                 </button>
                                             </a>
@@ -93,7 +91,9 @@
                                     </p>
                                 </form>
                             </div>
-                            <div class="md:flex font-sans pt-8">
+                            @endforeach
+                            
+                            {{-- <div class="md:flex font-sans pt-8">
                                 <div class="md:shrink-0">
                                     <img src="https://www.rentalmobilbali.net/wp-content/uploads/2020/01/Tari-Kecak-Uluwatu-Bali-Feature-Image.jpg"
                                         alt=""
@@ -122,7 +122,7 @@
                                         <div class="flex-auto flex space-x-4">
                                             <a href="cart">
                                                 <button class="h-10 px-6 font-semibold rounded-full bg-violet-600 text-white"
-                                                type="button">
+                                                type="button" id="product_2">
                                                 Book Now
                                             </button>
                                             </a>
@@ -144,7 +144,7 @@
                                         Free welcome drink, mask, and lunch.
                                     </p>
                                 </form>
-                            </div>
+                            </div> --}}
                             <div class=" font-sans pt-8 text-center">
                                 <a href="#"
                                     class="inline-flex items-center py-2 px-4 text-sm fontmedium text-gray-500 bg-white rounded-lg border border-gray-300 hover:bg-gray-100 hover:textgray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray700 dark:hover:text-white">
